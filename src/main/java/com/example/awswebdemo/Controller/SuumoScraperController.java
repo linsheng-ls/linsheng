@@ -29,6 +29,8 @@ public class SuumoScraperController {
         return suumoScraperService.getHouseInfoByUrl(urlRaw);
     }
 
+
+
 }
 
 
