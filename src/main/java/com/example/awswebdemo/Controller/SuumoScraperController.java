@@ -19,15 +19,15 @@ public class SuumoScraperController {
         return "Scraping done for urlRaw: " + urlRaw;
     }
 
-    @GetMapping("/get-house")
-    public List<SuumoHouseInfo> getHouse() {
-        return suumoScraperService.getHouseInfoByUrl();
-    }
-
-    @GetMapping("/get-houseInfo")
-    public List<SuumoHouseInfo> houseInfo(@RequestParam String urlRaw) {
-        return suumoScraperService.getHouseInfoByUrl(urlRaw);
-    }
+//    @GetMapping("/get-house")
+//    public List<SuumoHouseInfo> getHouse() {
+//        return suumoScraperService.getHouseInfoByUrl();
+//    }
+//
+//    @GetMapping("/get-houseInfo")
+//    public List<SuumoHouseInfo> houseInfo(@RequestParam String urlRaw) {
+//        return suumoScraperService.getHouseInfoByUrl(urlRaw);
+//    }
 
 
 

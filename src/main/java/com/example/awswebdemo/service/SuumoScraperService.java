@@ -142,15 +142,15 @@ public class SuumoScraperService {
         }
     }
 
-
-    public List<SuumoHouseInfo> getHouseInfoByUrl() {
-        var houseList = suumoHouseInfoMapper.SelectBycrawlDate();
-        return houseList;
-    }
-
-    public List<SuumoHouseInfo> getHouseInfo(String urlRaw) {
-        var HouseInfo = suumoHouseInfoMapper.selectByUrl(urlRaw);
-        return houseList;
-    }
+//
+//    public List<SuumoHouseInfo> getHouseInfoByUrl() {
+//        var houseList = suumoHouseInfoMapper.SelectBycrawlDate();
+//        return houseList;
+//    }
+//
+//    public List<SuumoHouseInfo> getHouseInfo(String urlRaw) {
+//        var HouseInfo = suumoHouseInfoMapper.selectByUrl(urlRaw);
+//        return houseList;
+//    }
 
 }

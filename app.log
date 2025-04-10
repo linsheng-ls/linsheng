@@ -1,35 +1,17 @@
-2025-04-04T09:07:23.712+09:00  WARN 50488 --- [aws-web-demo] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h52m44s5ms527µs600ns).
-2025-04-04T09:07:48.551+09:00  INFO 50488 --- [aws-web-demo] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
-2025-04-04T09:10:40.170+09:00  INFO 50488 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-04T09:10:40.453+09:00  INFO 50488 --- [aws-web-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-04T09:10:40.458+09:00  INFO 50488 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2025-04-04T09:10:40.458+09:00  INFO 50488 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@20cff21e]]
-2025-04-04T09:10:40.458+09:00  INFO 50488 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2025-04-04T09:10:40.467+09:00  INFO 50488 --- [aws-web-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-04T09:10:40.475+09:00  INFO 50488 --- [aws-web-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-04T09:26:14.929+09:00  INFO 46420 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : Starting AwsWebDemoApplication using Java 17.0.10 with PID 46420 (C:\Users\linsh\aws-web-demo\target\classes started by linsh in C:\Users\linsh\aws-web-demo)
-2025-04-04T09:26:14.933+09:00  INFO 46420 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-04-04T09:26:16.032+09:00  INFO 46420 --- [aws-web-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-04T09:26:16.045+09:00  INFO 46420 --- [aws-web-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-04T09:26:16.046+09:00  INFO 46420 --- [aws-web-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-04-04T09:26:16.103+09:00  INFO 46420 --- [aws-web-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-04T09:26:16.104+09:00  INFO 46420 --- [aws-web-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1111 ms
-2025-04-04T09:26:16.859+09:00  INFO 46420 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2025-04-04T09:26:16.860+09:00  INFO 46420 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@54495935]]
-2025-04-04T09:26:16.861+09:00  INFO 46420 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2025-04-04T09:26:16.888+09:00  INFO 46420 --- [aws-web-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-04T09:26:16.899+09:00  INFO 46420 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : Started AwsWebDemoApplication in 2.8 seconds (process running for 3.852)
-2025-04-04T09:26:20.944+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-04T09:26:20.944+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-04T09:26:20.946+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-04T09:26:21.007+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-04T09:26:21.027+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-3] c.e.awswebdemo.Controller.LogController  : Front-end Log: Front-end loaded at 2025/4/4 9:26:20
-2025-04-04T09:26:21.357+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7680a254
-2025-04-04T09:26:21.358+09:00  INFO 46420 --- [aws-web-demo] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-04T09:26:48.565+09:00  INFO 46420 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-04T09:26:48.822+09:00  INFO 46420 --- [aws-web-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-04T09:26:48.824+09:00  INFO 46420 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2025-04-04T09:26:48.824+09:00  INFO 46420 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@54495935]]
-2025-04-04T09:26:48.824+09:00  INFO 46420 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2025-04-04T09:26:48.826+09:00  INFO 46420 --- [aws-web-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-04T09:26:48.834+09:00  INFO 46420 --- [aws-web-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-10T11:09:51.450+09:00  INFO 3724 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : Starting AwsWebDemoApplication using Java 17.0.10 with PID 3724 (C:\Users\linsh\aws-web-demo\target\classes started by linsh in C:\Users\linsh\aws-web-demo)
+2025-04-10T11:09:51.458+09:00  INFO 3724 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-04-10T11:09:52.449+09:00  INFO 3724 --- [aws-web-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-10T11:09:52.462+09:00  INFO 3724 --- [aws-web-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-10T11:09:52.462+09:00  INFO 3724 --- [aws-web-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-10T11:09:52.510+09:00  INFO 3724 --- [aws-web-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-10T11:09:52.510+09:00  INFO 3724 --- [aws-web-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1010 ms
+2025-04-10T11:09:53.121+09:00  INFO 3724 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-04-10T11:09:53.122+09:00  INFO 3724 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1e495414]]
+2025-04-10T11:09:53.122+09:00  INFO 3724 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-04-10T11:09:53.142+09:00  INFO 3724 --- [aws-web-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-10T11:09:53.148+09:00  INFO 3724 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : Started AwsWebDemoApplication in 2.105 seconds (process running for 2.719)
+2025-04-10T11:10:05.046+09:00  INFO 3724 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-10T11:10:05.264+09:00  INFO 3724 --- [aws-web-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-10T11:10:05.266+09:00  INFO 3724 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-04-10T11:10:05.266+09:00  INFO 3724 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1e495414]]
+2025-04-10T11:10:05.266+09:00  INFO 3724 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
