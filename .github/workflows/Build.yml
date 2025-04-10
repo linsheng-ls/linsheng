@@ -26,16 +26,17 @@ jobs:
       - name: Run Tests
         run: mvn test
 
-      # 📦 这里开始是 CD（部署）部分
+      # 📦 CD：上传 JAR 到 EC2
       - name: Upload jar to EC2
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ec2-user            # 如果你是 Ubuntu，请改成 ubuntu
+          username: ec2-user  # 如果是 Ubuntu，请改成 ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "aws-web-demo-0.0.1-SNAPSHOT.jar"  # ❗️改成你的 jar 文件名
+          source: "target/aws-web-demo-0.0.1-SNAPSHOT.jar"
           target: "~/app/"
 
+      # 🚀 CD：远程启动 Spring Boot 应用
       - name: Run jar on EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -44,4 +45,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             pkill -f 'java -jar' || true
-            nohup java -jar ~/app/your-project.jar > ~/app/app.log 2>&1 &
+            nohup java -jar ~/app/aws-web-demo-0.0.1-SNAPSHOT.jar > ~/app/app.log 2>&1 &
