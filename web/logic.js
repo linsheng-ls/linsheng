@@ -1,7 +1,7 @@
 
     // -------------log--------------------------------------------------------
  function logToServer(message) {
-    fetch('http://localhost:8080/log', {
+    fetch('http://13.115.148.68:8080/log', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ log: message })
@@ -48,7 +48,7 @@ function sendInput() {
     let stompClient = null;
 
     function connect() {
-        const socket = new SockJS('http://localhost:8080/chat');
+        const socket = new SockJS('http://13.115.148.68:8080/chat');
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, function (frame) {
@@ -99,7 +99,7 @@ function sendInput() {
       const url = urlInput.value;
   
       try {
-        const response = await fetch(`http://localhost:8080/scrape-house?urlRaw=${encodeURIComponent(url)}`);
+        const response = await fetch(`http://13.115.148.68:8080/scrape-house?urlRaw=${encodeURIComponent(url)}`);
   
         if (!response.ok) {
           if (response.status === 409) {
@@ -132,7 +132,7 @@ function sendInput() {
   
   // 加载房源URL下拉选项
   async function loadUrlOptions() {
-    const res = await fetch('http://localhost:8080/get-house');
+    const res = await fetch('http://13.115.148.68:8080/get-house');
     const houses = await res.json(); // 这是一个 SuumoHouseInfo 的数组
   
     houses.forEach(house => {
@@ -146,7 +146,7 @@ function sendInput() {
 
   // 根据选中 URL 加载对应记录
   async function loadHouseRecords(url) {
-    const res = await fetch(`http://localhost:8080/api/house-records?url=${encodeURIComponent(url)}`);
+    const res = await fetch(`http://13.115.148.68:8080/api/house-records?url=${encodeURIComponent(url)}`);
     const records = await res.json();
   
     tbody.innerHTML = '';
