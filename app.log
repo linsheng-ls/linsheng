@@ -42,3 +42,21 @@
 2025-04-10T12:13:48.469+09:00  INFO 45320 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
 2025-04-10T12:13:48.470+09:00  INFO 45320 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36510e73]]
 2025-04-10T12:13:48.470+09:00  INFO 45320 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-04-10T17:47:54.715+09:00  INFO 41500 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : Starting AwsWebDemoApplication using Java 17.0.10 with PID 41500 (C:\Users\linsh\aws-web-demo\target\classes started by linsh in C:\Users\linsh\aws-web-demo)
+2025-04-10T17:47:54.718+09:00  INFO 41500 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-04-10T17:47:56.179+09:00  INFO 41500 --- [aws-web-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-10T17:47:56.198+09:00  INFO 41500 --- [aws-web-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-10T17:47:56.199+09:00  INFO 41500 --- [aws-web-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-10T17:47:56.265+09:00  INFO 41500 --- [aws-web-demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-10T17:47:56.266+09:00  INFO 41500 --- [aws-web-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1483 ms
+2025-04-10T17:47:57.038+09:00  INFO 41500 --- [aws-web-demo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-04-10T17:47:57.313+09:00  INFO 41500 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-04-10T17:47:57.315+09:00  INFO 41500 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@33e3bd2e]]
+2025-04-10T17:47:57.316+09:00  INFO 41500 --- [aws-web-demo] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-04-10T17:47:57.339+09:00  INFO 41500 --- [aws-web-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-10T17:47:57.351+09:00  INFO 41500 --- [aws-web-demo] [main] c.e.awswebdemo.AwsWebDemoApplication     : Started AwsWebDemoApplication in 3.429 seconds (process running for 7.711)
+2025-04-10T17:48:33.009+09:00  INFO 41500 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-10T17:48:33.786+09:00  INFO 41500 --- [aws-web-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-10T17:48:33.788+09:00  INFO 41500 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-04-10T17:48:33.790+09:00  INFO 41500 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@33e3bd2e]]
+2025-04-10T17:48:33.790+09:00  INFO 41500 --- [aws-web-demo] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
