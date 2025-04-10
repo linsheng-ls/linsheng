@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.awswebdemo.mapper.SuumoHouseInfoMapper">
+
+    <!-- 插入数据 -->
+    <insert id="insert" parameterType="com.example.awswebdemo.entity.SuumoHouseInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO suumo_house_info (
+            house_id,
+            house_name,
+            price,
+            layout,
+            land_area,
+            building_area,
+            build_year_month,
+            address,
+            url
+        ) VALUES (
+                     #{houseId},
+                     #{houseName},
+                     #{price},
+                     #{layout},
+                     #{landArea},
+                     #{buildingArea},
+                     #{buildYearMonth},
+                     #{address},
+                     #{url}
+                 )
+    </insert>
+
+    <!-- 根据主键查询 -->
+    <select id="selectById" resultType="com.example.awswebdemo.entity.SuumoHouseInfo" parameterType="long">
+        SELECT * FROM suumo_house_info WHERE id = #{id}
+    </select>
+
+    <!-- 查询全部数据 -->
+    <select id="selectAll" resultType="com.example.awswebdemo.entity.SuumoHouseInfo">
+        SELECT * FROM suumo_house_info
+    </select>
+
+    <select id="selectByHouseId" resultType="com.example.awswebdemo.entity.SuumoHouseInfo">
+        SELECT * FROM suumo_house_info
+        WHERE house_id = #{houseId}
+    </select>
+    <select id="selectByUrl" resultType="com.example.awswebdemo.entity.SuumoHouseInfo">
+        SELECT * FROM suumo_house_info
+        WHERE url = #{url}
+    </select>
+    <select id="SelectBycrawlDate" resultType="com.example.awswebdemo.entity.SuumoHouseInfo">
+        SELECT *
+        FROM (
+                 SELECT *,
+                        ROW_NUMBER() OVER (PARTITION BY url ORDER BY crawl_date DESC) AS rn
+                 FROM suumo_house_info
+             ) AS ranked
+        WHERE rn = 1
+        ORDER BY crawl_date DESC;
+    </select>
+
+</mapper>

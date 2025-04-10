@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Suumo AWS练习用</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="logic.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🏡 AWS练习用</h1>
+    <a href="https://suumo.jp/" target="_blank">
+      <button>🏠 AWS练习用 SUUMO 首页</button>
+    </a>
+
+    <p>请输入你喜欢的房源链接，我们将帮你追踪价格变化！</p>
+
+    <form id="trackForm">
+      <input type="url" id="houseUrl" placeholder="粘贴 SUUMO 房源 URL..." required />
+      <button type="submit">开始追踪</button>
+    </form>
+    <!-- ✅ 提示用的区域，必须加上 -->
+    <div id="result" style="display: none; color: green; margin-top: 1rem;"></div>
+    
+
+
+  </div>
+
+  <h1>房源价格记录查看</h1>
+
+  <label for="houseUrlSelect">请选择房源链接：</label>
+  <select id="houseUrlSelect">
+    <option value="">-- 请选择 --</option>
+  </select>
+
+  <table id="houseTable" style="display: none;">
+    <thead>
+      <tr>
+        <th>爬取时间</th>
+        <th>价格</th>
+        <th>物件名</th>
+        <th>間取り</th>
+        <th>土地面积</th>
+        <th>建物面积</th>
+        <th>建成年月</th>
+        <th>住所</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+
+
+
+
+</body>
+</html>
