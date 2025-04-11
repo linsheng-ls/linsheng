@@ -12,11 +12,6 @@ import org.mybatis.spring.annotation.MapperScan;
 @RestController
 public class AwsWebDemoApplication {
 
-    @GetMapping("/")
-    public String hello() {
-        return "Hello ,我是本地的";
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(AwsWebDemoApplication.class, args);
     }
