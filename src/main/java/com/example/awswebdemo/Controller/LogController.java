@@ -13,5 +13,8 @@ public class LogController {
     public void receiveLog(@RequestBody Map<String, String> payload) {
         String log = payload.get("log");
         logger.info("Front-end Log: " + log);
+
+
+
     }
 }
