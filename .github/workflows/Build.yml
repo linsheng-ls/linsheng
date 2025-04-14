@@ -35,6 +35,24 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "target/aws-web-demo-0.0.1-SNAPSHOT.jar"
           target: "~/app/"
+  # 上传前端代码
+      - name: Upload web to EC2
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "web/*"
+          target: "~/app/web/"
+      # （可选）重启 Nginx
+      - name: Reload Nginx on EC2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo nginx -s reload
 
       # 🚀 CD：远程启动 Spring Boot 应用
       - name: Run jar on EC2
