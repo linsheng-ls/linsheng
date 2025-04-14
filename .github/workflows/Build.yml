@@ -43,7 +43,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "web/*"
-          target: "~/app/web/"
+          target: "~/app"
       # （可选）重启 Nginx
       - name: Reload Nginx on EC2
         uses: appleboy/ssh-action@v1.0.0
