@@ -12,6 +12,8 @@ import org.mybatis.spring.annotation.MapperScan;
 @RestController
 public class AwsWebDemoApplication {
 
+
+
     public static void main(String[] args) {
         SpringApplication.run(AwsWebDemoApplication.class, args);
     }
